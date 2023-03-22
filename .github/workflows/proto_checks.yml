@@ -26,6 +26,7 @@ jobs:
         run: |
           go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.28
           go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.2
+          mkdir build
       - name: Generating protos
         run: |
           protoc -I=$PROTO_DIR --go_out=$GEN_OUT_DIR $(find $PROTO_DIR -type f -name '*.proto')
