@@ -23,4 +23,6 @@ message User {
     string name = 1;
     // The user age
     int32 age = 2;
+    // address
+    string address = 3;
 }
